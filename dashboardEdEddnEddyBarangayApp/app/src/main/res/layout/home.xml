@@ -1,4 +1,5 @@
-<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent">
@@ -6,19 +7,23 @@
 	<ScrollView
 		android:id="@+id/home"
 		android:layout_width="match_parent"
-		android:layout_height="match_parent">
+		android:layout_height="match_parent"
+		android:fillViewport="true"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
 
 		<RelativeLayout
 			android:id="@+id/content_container"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content">
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
 
 
 			<RelativeLayout
 				android:id="@+id/page_home_ek1"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginStart="0dp"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
 				android:layout_marginTop="0dp">
 
 				<View
@@ -89,7 +94,7 @@
 					android:layout_width="383dp"
 					android:layout_height="47.5dp"
 					android:layout_gravity="center_horizontal|center"
-					android:layout_marginLeft="-4dp"
+					android:layout_marginLeft="8dp"
 					android:layout_marginTop="0dp"
 					android:gravity="center"
 					android:text="@string/welcome__user__string"
@@ -103,7 +108,7 @@
 				android:id="@+id/donate"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:layout_marginStart="24dp"
+				android:layout_marginStart="40dp"
 				android:layout_marginTop="339dp">
 
 				<View
@@ -114,12 +119,15 @@
 					android:layout_marginTop="-339dp"
 					android:background="@drawable/_bg__donate_ek1_shape" />
 
-				<View
-					android:id="@+id/button"
+				<Button
+					android:id="@+id/appointmentButton"
 					android:layout_width="327dp"
 					android:layout_height="58dp"
 					android:layout_marginStart="0dp"
 					android:layout_marginTop="0dp"
+					android:text="@string/appointment_string"
+					android:textColor="@color/_bg__home_ek2_color"
+					android:textSize="20sp"
 					android:background="@drawable/button_shape" />
 
 				<View
@@ -149,7 +157,7 @@
 				android:id="@+id/sell"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:layout_marginStart="24dp"
+				android:layout_marginStart="40dp"
 				android:layout_marginTop="411dp">
 
 				<View
@@ -195,7 +203,7 @@
 				android:id="@+id/nutritional_guide"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:layout_marginStart="24dp"
+				android:layout_marginStart="40dp"
 				android:layout_marginTop="483dp">
 
 				<View
@@ -241,7 +249,7 @@
 				android:id="@+id/nutritional_guide_ek2"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:layout_marginStart="27dp"
+				android:layout_marginStart="40dp"
 				android:layout_marginTop="555dp">
 
 				<View
@@ -285,4 +293,4 @@
 		</RelativeLayout>
 	</ScrollView>
 
-</HorizontalScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
